@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="300.0" prefWidth="507.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+    <center>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="507.0">
+            <children>
+                <VBox prefHeight="285.0" prefWidth="507.0" spacing="10.0">
+                    <children>
+                        <HBox prefHeight="26.0" prefWidth="455.0">
+                            <children>
+                                <Label text="Hello,">
+                                    <font>
+                                        <Font size="31.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="nama" text="nama">
+                                    <font>
+                                        <Font size="31.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <Label prefHeight="41.0" prefWidth="346.0" text="Form Peminjaman Buku">
+                            <font>
+                                <Font size="33.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="41.0" prefWidth="593.0">
+                            <children>
+                                <DatePicker fx:id="pinjam" onAction="#pinjam" promptText="Tanggal Pinjam" />
+                                <DatePicker fx:id="kembali" onAction="#kembali" promptText="Tanggal Kembali" />
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="455.0" spacing="10.0">
+                            <children>
+                                <Label text="Pilih Buku" />
+                                <Button mnemonicParsing="false" onAction="#tampilBuku" text="Daftar Buku" />
+                                <Label fx:id="buku" text="Klik daftar buku untuk memilih buku" />
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                        </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                              <Button mnemonicParsing="false" onAction="#lendBook" text="Pinjam Buku" />
+                        <Button mnemonicParsing="false" onAction="#returnBook" text="Kembalikan Buku" />
+                     </children>
+                  </HBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </center>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="History" onAction="#showHistory">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Close" onAction="#close">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" onAction="#about">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F1" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>

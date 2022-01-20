@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="234.0" prefWidth="388.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <children>
+        <VBox prefHeight="234.0" prefWidth="388.0" spacing="10.0">
+            <children>
+                <Label text="Login">
+                    <font>
+                        <Font size="45.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="username" prefHeight="25.0" prefWidth="225.0" promptText="Username" />
+                <TextField fx:id="password" prefHeight="25.0" prefWidth="225.0" promptText="Password" />
+                <Button mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#Login" text="Login" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="notif" alignment="CENTER"  />
+               </children></HBox>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
